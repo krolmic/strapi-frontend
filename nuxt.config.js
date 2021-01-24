@@ -52,5 +52,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+
+  // Configuration for a statically generated site
+  // https://nuxtjs.org/docs/2.x/deployment/netlify-deployment
+  target: 'static'
 }
