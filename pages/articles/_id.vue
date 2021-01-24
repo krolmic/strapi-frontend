@@ -4,7 +4,7 @@
       v-if="article.image"
       id="banner"
       class="uk-height-small uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding"
-      :data-src="apiUrl + article.image.url"
+      :data-src="getImgUrl(article.image.url, apiUrl)"
       uk-img
     >
       <h1>{{ article.title }}</h1>
@@ -30,6 +30,9 @@
 import VueMarkdownIt from "vue-markdown-it";
 const moment = require("moment");
 
+// Functions
+import {getImgUrl} from "@/utils/urls.js";
+
 // GraphQL queries
 import articleQuery from "../../apollo/queries/article/article.gql"
 
@@ -43,6 +46,9 @@ export default {
   },
   components: {
     VueMarkdownIt
+  },
+  methods: {
+    getImgUrl: getImgUrl
   },
   apollo: {
     article: {

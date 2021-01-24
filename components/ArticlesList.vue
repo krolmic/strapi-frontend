@@ -9,7 +9,7 @@
       >
         <div class="uk-card uk-card-muted">
           <div class="uk-card-media-top">
-            <img :src="apiUrl + article.image.url" alt=""/>
+            <img :src="getImgUrl(article.image.url, apiUrl)" alt=""/>
           </div>
           <div class="uk-card-body">
             <p
@@ -22,12 +22,14 @@
           </div>
         </div>
       </router-link>
-
     </div>
   </div>
 </template>
 
 <script>
+// Functions
+import {getImgUrl} from "@/utils/urls";
+
 export default {
   data: function () {
     return {
@@ -36,6 +38,9 @@ export default {
   },
   props: {
     articles: Array
+  },
+  methods: {
+    getImgUrl: getImgUrl
   }
 };
 </script>
