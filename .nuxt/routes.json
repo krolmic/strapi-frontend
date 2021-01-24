@@ -1,0 +1,30 @@
+[
+  {
+    "name": "contact",
+    "path": "/contact",
+    "component": "/Users/michaelkrol/Development/projects/blog-strapi/frontend/pages/contact.vue",
+    "chunkName": "pages/contact",
+    "_name": "_c8077db0"
+  },
+  {
+    "name": "articles-id",
+    "path": "/articles/:id?",
+    "component": "/Users/michaelkrol/Development/projects/blog-strapi/frontend/pages/articles/_id.vue",
+    "chunkName": "pages/articles/_id",
+    "_name": "_acf275e0"
+  },
+  {
+    "name": "categories-id",
+    "path": "/categories/:id?",
+    "component": "/Users/michaelkrol/Development/projects/blog-strapi/frontend/pages/categories/_id.vue",
+    "chunkName": "pages/categories/_id",
+    "_name": "_035b7422"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/michaelkrol/Development/projects/blog-strapi/frontend/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_ab330e4c"
+  }
+]
