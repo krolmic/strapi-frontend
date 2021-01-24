@@ -1,6 +1,18 @@
+<style>
+.nav-ul-right {
+  flex-direction: column;
+}
+
+@media (min-width: 575px) {
+  .nav-ul-right {
+    flex-direction: row;
+  }
+}
+</style>
+
 <template>
   <div>
-    <nav class="uk-navbar-container" uk-navbar>
+    <nav class="uk-navbar-transparent" uk-navbar>
       <div class="uk-navbar-left">
         <ul class="uk-navbar-nav">
           <li>
@@ -12,8 +24,8 @@
       </div>
 
       <div class="uk-navbar-right">
-        <ul class="uk-navbar-nav">
-          <li v-for="category in categories" v-bind:key="category.id">
+        <ul class="uk-navbar-nav nav-ul-right">
+          <li class="uk-padding-small" v-for="category in categories" v-bind:key="category.id">
             <router-link
               :to="{ path: '/categories/' + category.id }"
               :key="category.id"
@@ -21,7 +33,7 @@
               {{ category.name }}
             </router-link>
           </li>
-          <li>
+          <li class="uk-padding-small">
             <router-link :to="{ path: '/contact'}">
               Contact
             </router-link>
