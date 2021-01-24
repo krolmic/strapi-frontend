@@ -69,7 +69,8 @@ typings/
 .nuxt
 
 # Nuxt generate
-dist
+# A possible fix for "Failed during stage 'building site': Deploy directory 'dist' does not exist"
+# dist
 
 # vuepress build output
 .vuepress/dist
